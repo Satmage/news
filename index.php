@@ -6,7 +6,6 @@ require __DIR__ . '/models/news.php';
 
 /*$db = new DB();
 $items = $db->query('SELECT * FROM news');*/
-$items = new News();
-$items->getAll();
+$items = News::getAll();
 wtf($items);
 
