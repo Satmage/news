@@ -14,7 +14,7 @@ class DB
 /*
 Отправка запросов в БД
 */
-	public function query($sql) 
+	public function query($sql,$class = 'stdClass') 
 	{
 		$res = mysql_query($sql);
 		
@@ -24,7 +24,7 @@ class DB
 		}
 
 		$ret = [];
-		while ($row = mysql_fetch_object($res)) 
+		while ($row = mysql_fetch_object($res,$class)) 
 		{
 			$ret[] = $row;
 		}
