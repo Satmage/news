@@ -9,6 +9,7 @@ class DB
 	{
 		mysql_connect('localhost', 'root', '');
 		mysql_select_db('gallery');
+		mysql_set_charset('utf8');
 	}
 /*
 Отправка запросов в БД
