@@ -11,5 +11,6 @@ class News
 	public function getAll()
 	{
 		$db = new DB();
+		return $db->query('SELECT * FROM news');
 	}
 } 
