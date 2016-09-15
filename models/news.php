@@ -8,7 +8,7 @@ class News
 	public $title;
 	public $text;
 
-	public function getAll()
+	static public function getAll()
 	{
 		$db = new DB();
 		return $db->query('SELECT * FROM news');
