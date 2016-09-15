@@ -12,10 +12,8 @@ class NewsController
 
 	public static function actionOne()
 	{	
-		echo "ActionOne";
-		die;
 		$id = $_GET['id'];
-		$items = News::getOne();
+		$items = News::getOne($id);
 		include __DIR__ . '/../views/news/one.php';
 	}
 }
