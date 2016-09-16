@@ -1,7 +1,5 @@
 <?php
 
-require __DIR__ . '/../models/news.php';
-
 class NewsController 
 {
 	public static function actionAll() 
