@@ -1,16 +1,13 @@
  <?php
 
 class News 
+		extends AbstractModel
 {
 	public $id;
 	public $title;
 	public $text;
 
-	public static function getAll()
-	{
-		$db = new DB();
-		return $db->queryAll('SELECT * FROM news', 'News');
-	}
+	protected static $table = 'news';
 
 	public static function getOne($id)
 	{
